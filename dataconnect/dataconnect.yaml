@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "full-rank-band"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "full-rank-band-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
