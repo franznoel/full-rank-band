@@ -5,8 +5,14 @@
   "scripts": {
     "dev": "nodemon --watch src --ext js,ts,jsx,tsx,css --exec 'next dev'",
     "build": "next build",
+    "build:functions": "cd functions && npm run build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:all": "yarn build && yarn build:functions",
+    "predeploy": "tsc",
+    "deploy": "firebase deploy --only functions,hosting",
+    "install:all": "yarn install && npm --prefix functions install",
+    "postbuild": "cp -R .next functions/.next"
   },
   "dependencies": {
     "@emotion/react": "11.13.5",
@@ -14,6 +20,8 @@
     "@firebasegen/default-connector": "link:dataconnect-generated/js/default-connector",
     "@mui/icons-material": "6.1.9",
     "@mui/material": "6.1.9",
+    "firebase-admin": "13.0.1",
+    "firebase-functions": "6.1.1",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106"

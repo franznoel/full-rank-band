@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs", // Required for Firebase Functions
+    "target": "es2017", // Aligns with Firebase Functions runtime
+    "lib": ["esnext", "dom"], // Supports modern JavaScript and browser features
+    "strict": true, // Enables strict type-checking
+    "noImplicitReturns": true, // Helps avoid missing return statements
+    "noUnusedLocals": true, // Removes unused variables
+    "sourceMap": true, // Useful for debugging
+    "outDir": "lib", // Where compiled files are stored
+    "baseUrl": ".", // Simplifies module resolution
+    "paths": {
+      "@/*": ["src/*"] // Supports absolute imports
+    },
+    "esModuleInterop": true, // Fixes React import errors
+    "skipLibCheck": true, // Avoids type-checking in `node_modules`
+    "resolveJsonModule": true, // Allows importing `.json` files
+    "moduleResolution": "node", // Ensures compatibility with Node.js modules
+    "isolatedModules": true // Required for Next.js
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib"
+  ]
+}
