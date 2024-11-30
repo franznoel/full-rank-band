@@ -5,19 +5,18 @@ import {
   CssBaseline,
   ThemeProvider,
   Box,
-  Typography,
 } from '@mui/material';
 import theme from './theme';
 import Navigation from './components/Navigation';
 import Link from 'next/link';
-import Image from 'next/image'; // Import the Next.js Image component
-import logo from './images/logo.png';
+import ImageComponent from './components/ImageComponent';
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en">
       <body>
@@ -51,7 +50,7 @@ export default function RootLayout({
                   textAlign: 'center',
                 }}
               >
-                <Link href='/'>
+                <Link href='/' color="white">
                   <Box
                     sx={{
                       display: 'flex',
@@ -62,14 +61,7 @@ export default function RootLayout({
                       margin: 0,
                     }}
                   >
-                    <Typography variant="h4">Full Rank</Typography>
-                    {/* <Image 
-                      src={logo} // Path to the logo
-                      alt='Full Rank Logo'
-                      width={200} // Adjust width as needed
-                      height={200} // Adjust height as needed
-                      priority // Ensures logo loads quickly
-                    /> */}
+                    <ImageComponent imageName='images/logo.png' />
                   </Box>
                 </Link>
               </Box>
