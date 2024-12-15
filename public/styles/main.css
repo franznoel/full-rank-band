@@ -1,0 +1,73 @@
+body {
+  background-color: #f8f1e7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section {
+  background: url('../images/full-rank-bank-wish-bg.jpeg') no-repeat top center/cover;
+  color: white;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+
+.hero-section h1.hero-title {
+  font-weight: bold;
+  color: #D7263D;
+  font-size: 50px;
+}
+
+.hero-section p.h4 {
+  font-size: 30px;
+}
+
+.hero-section p.h5 {
+  font-size: 20px;
+}
+
+.event-details {
+  background-color: #F3E7D3;
+  color: #333;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer {
+  background-color: #2b2d42;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Media Query for iPhone-sized screens */
+@media (max-width: 768px) {
+  .hero-section {
+      background-size: 100% auto; /* Ensures the image always fills the container */
+      background-position: top center; /* Keeps the image centered */
+      height: 25vh; /* Adjusts height for smaller screens */
+      width: 100%; /* Ensures full width */
+  }
+
+  .hero-section h1.hero-title {
+      font-size: 36px; /* Smaller font size for smaller screens */
+  }
+
+  .hero-section p.h4 {
+      font-size: 24px;
+  }
+
+  .hero-section p.h5 {
+      font-size: 18px;
+  }
+
+  .footer {
+    font-size: 14px; /* Adjust footer text size for smaller screens */
+    padding: 0.8rem 0;
+  }  
+}
