@@ -48,26 +48,29 @@ body {
 /* Media Query for iPhone-sized screens */
 @media (max-width: 768px) {
   .hero-section {
-      background-size: 100% auto; /* Ensures the image always fills the container */
-      background-position: top center; /* Keeps the image centered */
-      height: 25vh; /* Adjusts height for smaller screens */
-      width: 100%; /* Ensures full width */
+      background-size: 100% auto;
+      background-position: top center;
+      height: 28vh;
+      width: 100%;
   }
 
   .hero-section h1.hero-title {
-      font-size: 36px; /* Smaller font size for smaller screens */
+      font-size: 32px;
+      margin: 0;
   }
 
   .hero-section p.h4 {
       font-size: 24px;
+      margin: 0;
   }
 
   .hero-section p.h5 {
       font-size: 18px;
+      margin: 0;
   }
 
   .footer {
-    font-size: 14px; /* Adjust footer text size for smaller screens */
+    font-size: 14px;
     padding: 0.8rem 0;
   }  
 }
