@@ -30,6 +30,9 @@
   const eventList = document.getElementById("event-list");
   const createEmulatorUserButton = document.getElementById("create-emulator-user");
   const deleteEventButton = document.getElementById("delete-event-button");
+  const profileEmail = document.getElementById("profile-email");
+  let pageUnsubscribe = null;
+  let eventsUnsubscribe = null;
 
   function setMessage(element, message, isError) {
     element.textContent = message;
@@ -242,16 +245,27 @@
   auth.onAuthStateChanged((user) => {
     loginPanel.hidden = Boolean(user);
     dashboard.hidden = !user;
+    profileEmail.textContent = user?.email || "Admin";
 
     if (!user) {
+      if (pageUnsubscribe) {
+        pageUnsubscribe();
+        pageUnsubscribe = null;
+      }
+
+      if (eventsUnsubscribe) {
+        eventsUnsubscribe();
+        eventsUnsubscribe = null;
+      }
+
       return;
     }
 
-    pageRef.onSnapshot((snapshot) => {
+    pageUnsubscribe = pageRef.onSnapshot((snapshot) => {
       fillForm(pageForm, { ...defaults, ...(snapshot.exists ? snapshot.data() : {}) });
     });
 
-    eventsRef.orderBy("sortOrder", "asc").onSnapshot((snapshot) => {
+    eventsUnsubscribe = eventsRef.orderBy("sortOrder", "asc").onSnapshot((snapshot) => {
       events = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       renderEventList();
 

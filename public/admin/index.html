@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Rank Admin</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2RKQ7Q046"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S2RKQ7Q046');
+  </script>
   <link rel="stylesheet" href="../styles/admin.css">
 </head>
 <body>
@@ -37,6 +44,10 @@
         </div>
         <div class="header-actions">
           <a href="../" target="_blank" rel="noreferrer">View Site</a>
+          <button type="button" id="profile-button" class="profile-button" title="Signed-in user">
+            <span class="profile-avatar" aria-hidden="true">FR</span>
+            <span id="profile-email">Admin</span>
+          </button>
           <button type="button" id="logout-button" class="secondary">Log Out</button>
         </div>
       </header>

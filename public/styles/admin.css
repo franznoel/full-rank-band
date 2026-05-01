@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   background: var(--wash);
   color: var(--ink);
@@ -48,6 +52,33 @@ button.secondary,
   background: #fff;
   color: var(--night);
   border-color: var(--line);
+}
+
+button.profile-button {
+  background: var(--night);
+  border-color: var(--night);
+  gap: 0.55rem;
+  max-width: min(320px, 100%);
+}
+
+.profile-avatar {
+  align-items: center;
+  background: #fff;
+  border-radius: 999px;
+  color: var(--night);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  font-weight: 800;
+  height: 26px;
+  justify-content: center;
+  width: 26px;
+}
+
+#profile-email {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 button.danger {
@@ -251,6 +282,10 @@ textarea {
   .events-layout {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .header-actions {
+    justify-content: start;
   }
 
   .editor-grid {
