@@ -35,7 +35,74 @@ body {
   background-color: #F3E7D3;
   color: #333;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
+}
+
+.event-details img,
+.cms-content img {
+  height: auto;
+  max-width: 100%;
+}
+
+.events-section {
+  background: #f8f1e7;
+  color: #242424;
+  padding: 2.5rem 1rem;
+}
+
+.events-wrap {
+  margin: 0 auto;
+  max-width: 1040px;
+}
+
+.events-wrap h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.events-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.event-card {
+  background: #fffaf2;
+  border: 1px solid rgba(43, 45, 66, 0.16);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.event-card img {
+  aspect-ratio: 16 / 10;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.event-card-body {
+  padding: 1rem;
+}
+
+.event-card h3 {
+  color: #2b2d42;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.event-meta,
+.event-location,
+.event-ticket {
+  margin: 0 0 0.4rem;
+}
+
+.event-description {
+  margin: 0.75rem 0 0;
 }
 
 .footer {

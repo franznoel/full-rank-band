@@ -1,0 +1,13 @@
+{
+  "name": "full-rank-band",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full Rank Band Firebase Hosting site and CMS.",
+  "scripts": {
+    "firebase:emulators": "firebase emulators:start",
+    "deploy": "firebase deploy"
+  },
+  "devDependencies": {
+    "firebase-tools": "^15.15.0"
+  }
+}
